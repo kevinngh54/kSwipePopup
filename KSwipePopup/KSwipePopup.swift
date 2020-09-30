@@ -32,7 +32,8 @@ class KSwipePopup: UIViewController {
     ///Show popup in a viewcontroller
     func showPopup(in viewController: UIViewController, completion: (() -> Void)? = nil) {
         self.modalPresentationStyle = .overFullScreen
-        viewController.present(self, animated: false, completion: {
+        viewController.present(self, animated: false, completion: { [weak self] in
+            guard let self = self else { return }
             let popup = self.getPopupView()
             let originFrame = popup.frame
             popup.frame = CGRect(x: popup.frame.origin.x,
@@ -41,7 +42,8 @@ class KSwipePopup: UIViewController {
                                  height: popup.frame.size.height)
             UIView.animate(withDuration: self.duration, animations: {
                 popup.frame = originFrame
-            }, completion: { _ in
+            }, completion: { [weak self] _ in
+                guard let self = self else { return }
                 self.originCenterY = self.getPopupView().center.y
                 if let completion = completion {
                     completion()

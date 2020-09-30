@@ -24,4 +24,8 @@ class ExampleSwipePopup: KSwipePopup {
     @IBAction func closeAction(_ sender: Any) {
         swipeDown()
     }
+    
+    deinit {
+        print("Of course it work :3")
+    }
 }

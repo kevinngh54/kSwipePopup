@@ -13,6 +13,9 @@
 		D648660F2524CC810095B27A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D648660D2524CC810095B27A /* Main.storyboard */; };
 		D64866112524CC820095B27A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D64866102524CC820095B27A /* Assets.xcassets */; };
 		D64866142524CC820095B27A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D64866122524CC820095B27A /* LaunchScreen.storyboard */; };
+		D648661C2524CCB60095B27A /* KSwipePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D648661B2524CCB50095B27A /* KSwipePopup.swift */; };
+		D648661F2524CF7C0095B27A /* ExampleSwipePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D648661D2524CF7C0095B27A /* ExampleSwipePopup.swift */; };
+		D64866202524CF7C0095B27A /* ExampleSwipePopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = D648661E2524CF7C0095B27A /* ExampleSwipePopup.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		D64866102524CC820095B27A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D64866132524CC820095B27A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D64866152524CC820095B27A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D648661B2524CCB50095B27A /* KSwipePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KSwipePopup.swift; sourceTree = "<group>"; };
+		D648661D2524CF7C0095B27A /* ExampleSwipePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleSwipePopup.swift; sourceTree = "<group>"; };
+		D648661E2524CF7C0095B27A /* ExampleSwipePopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleSwipePopup.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				D64866102524CC820095B27A /* Assets.xcassets */,
 				D64866122524CC820095B27A /* LaunchScreen.storyboard */,
 				D64866152524CC820095B27A /* Info.plist */,
+				D648661B2524CCB50095B27A /* KSwipePopup.swift */,
+				D648661D2524CF7C0095B27A /* ExampleSwipePopup.swift */,
+				D648661E2524CF7C0095B27A /* ExampleSwipePopup.xib */,
 			);
 			path = KSwipePopup;
 			sourceTree = "<group>";
@@ -127,6 +136,7 @@
 			files = (
 				D64866142524CC820095B27A /* LaunchScreen.storyboard in Resources */,
 				D64866112524CC820095B27A /* Assets.xcassets in Resources */,
+				D64866202524CF7C0095B27A /* ExampleSwipePopup.xib in Resources */,
 				D648660F2524CC810095B27A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,7 +150,9 @@
 			files = (
 				D648660C2524CC810095B27A /* ViewController.swift in Sources */,
 				D64866082524CC810095B27A /* AppDelegate.swift in Sources */,
+				D648661F2524CF7C0095B27A /* ExampleSwipePopup.swift in Sources */,
 				D648660A2524CC810095B27A /* SceneDelegate.swift in Sources */,
+				D648661C2524CCB60095B27A /* KSwipePopup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

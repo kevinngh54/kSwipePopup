@@ -9,12 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var examplePopup: KSwipePopup?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
 
+    @IBAction func showPopupAction(_ sender: Any) {
+        examplePopup = ExampleSwipePopup()
+        examplePopup?.showPopup(in: self)
+    }
 }
 

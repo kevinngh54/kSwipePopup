@@ -19,7 +19,7 @@ class KSwipePopup: UIViewController {
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupPopupView()
     }
     
@@ -32,9 +32,12 @@ class KSwipePopup: UIViewController {
     ///Show popup in a viewcontroller
     func showPopup(in viewController: UIViewController, completion: (() -> Void)? = nil) {
         self.modalPresentationStyle = .overFullScreen
+        self.loadViewIfNeeded()
+        let popup = self.getPopupView()
+        popup.isHidden = true
         viewController.present(self, animated: false, completion: { [weak self] in
             guard let self = self else { return }
-            let popup = self.getPopupView()
+            popup.isHidden = false
             let originFrame = popup.frame
             popup.frame = CGRect(x: popup.frame.origin.x,
                                  y: self.view.frame.height,
@@ -42,8 +45,7 @@ class KSwipePopup: UIViewController {
                                  height: popup.frame.size.height)
             UIView.animate(withDuration: self.duration, animations: {
                 popup.frame = originFrame
-            }, completion: { [weak self] _ in
-                guard let self = self else { return }
+            }, completion: { _ in
                 self.originCenterY = self.getPopupView().center.y
                 if let completion = completion {
                     completion()
@@ -62,8 +64,8 @@ class KSwipePopup: UIViewController {
                                  y: self.view.frame.height,
                                  width: popup.frame.size.width,
                                  height: popup.frame.size.height)
-        }, completion: { [weak self] _ in
-            self?.dismiss(animated: false, completion: completion)
+            }, completion: { [weak self] _ in
+                self?.dismiss(animated: false, completion: completion)
         })
     }
     
